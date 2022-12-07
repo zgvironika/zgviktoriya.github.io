@@ -1,0 +1,357 @@
+body{background: linear-gradient(120deg,#40776B ,#20312D );}
+
+/*.panorama{width:90%;
+	display: block;
+    margin: 0 auto;
+    margin-top: 8%;}*/
+
+.background {
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	position: absolute; z-index:-2}
+
+#rectangle {
+	width: 59%;
+	height: 125.7%;
+	background: black;
+	opacity: 0.8;
+	position: absolute; z-index:0;
+	margin-top: -8%;
+	left: 0%;
+	filter: drop-shadow(40px 3px 18px rgba(0,0,0,1));}
+
+p{font-family: 'Comfortaa', cursive;
+	font-size: 150%;
+	color: #E3FCF6;
+	text-align:justify;
+	text-indent: 30px; 
+	position: absolute; z-index:3;
+	line-height: 1.5;}
+
+.arh1{position: absolute; top: 23%; left: 5%; right: 44%;}
+.arh2{position: absolute; top: 53%; left: 5%; right: 44%;}
+.arh3{position: absolute; top: 87%; left: 5%; right: 44%;}
+
+.h1{font-family: 'Playfair Display SC', serif;
+	font-size: 470%;
+	color: #FFBD47;
+	text-align:justify;
+	position: absolute; top: 1%; right: 44%}
+
+.fonar{height: 70%;
+	width: 45%;
+	position: absolute; top: 0%; left: -8.5%;
+	transform: scaleX(-1);}
+
+.karta{height: 120%;
+	position: absolute; top: 130%; left: 0%;}
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  
+  overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
+}
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+
+    transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+}
+
+/**************************************************************************************************************************/
+.button{position: absolute; top: 120%; left: 5%;
+position: absolute; z-index:2;
+}
+
+.glavn{height: 12%;
+	position: absolute; top: 2%; left: 2%;
+	z-index:1;}
+
+#square01{	height: 0.5%;
+	width: 37%;
+	position: absolute; top: 26%; left: 10.1%;
+	z-index:1;
+	background: #E8FCFD;
+	}
+
+.avangard{
+  background:url(https://acegif.com/wp-content/uploads/gif/confetti-18.gif) no-repeat center/cover;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  color:yellow;
+  font-weight:bold;
+  font-size:700%;
+  top: -10%;
+  right: 53%;
+  font-family: 'Playfair Display SC', serif;}
+
+div.background {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;}
+
+img.orang {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;}
+
+#rectanglefon{
+	width: 100%;
+	height: 180%;
+	position: absolute; z-index:-1;
+	margin-top: 0%;
+	left: 0%;
+	background: black;
+	opacity: 0.3;}
+
+#rectangle1 {
+	width: 100%;
+	height: 70%;
+	background: linear-gradient(170deg,#35969B, #38A889	);
+	position: absolute; z-index:0;
+	top: 7%;
+	right: 0%;}
+
+.i01{height: 34%;
+	position: absolute; top: 28%; right: 22%;
+	z-index:1;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+.i02{height: 30%;
+	position: absolute; top: 17%; right: 9%;
+	z-index:1;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+.i03{height: 12%;
+	position: absolute; top: 13%; right: 5%;
+	z-index:1;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+.i04{ object-fit: cover;
+	height: 27%;
+	width: 8%;
+	position: absolute; top: 44%; right: 17%;
+	z-index:1;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+
+#square11{	height: 16%;
+	width: 8%;
+	position: absolute; top: 15%; right: 25%;
+	z-index:0;
+	background:#E8FCFD;
+	opacity: 0.5;}
+#square12{	width: 8%;
+	height: 16%;
+	position: absolute; top: 37%; right: 14%;
+	z-index:0;
+	background:#344E4F;
+	opacity: 0.5;}
+#square13{	width: 6%;
+	height: 12%;
+	position: absolute; top: 53%; right: 35%;
+	z-index:0;
+	background:#344E4F;
+	opacity: 0.5;}
+#square14{	width: 3%;
+	height: 6%;
+	position: absolute; top: 50%; right: 5%;
+	z-index:0;
+	background:#E8FCFD;
+	opacity: 0.5;}
+#square15{	width: 3%;
+	height: 6%;
+	position: absolute; top: 10%; right: 40%;
+	z-index:0;
+	background:#E8FCFD;
+	opacity: 0.5;}
+#square16{	width: 3%;
+	height: 6%;
+	position: absolute; top: 14%; right: 9%;
+	z-index:0;
+	background:#344E4F;
+	opacity: 0.5;}
+
+
+.p11{position: absolute; top: 28%; left: 2%; right: 46%;}
+.p12{position: absolute; top: 88%; left: 7%; right: 46%;}
+.p13{position: absolute; top: 98%; left: 7%; right: 46%;}
+
+#rectangle11 {
+	width: 100%;
+	height: 50%;
+	background: linear-gradient(170deg,#344E4F, #3D5C4C	);
+	position: absolute; z-index:0;
+	top: 90%;
+	left: 0%;}
+
+
+img.div11{background-size: cover;}
+
+.i11{height: 40%;
+	position: absolute; top: 160%; left: 70%;}
+
+.i12{height: 40%;
+	position: absolute; top: 180%; left: 30%;}
+
+
